@@ -5,17 +5,12 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Map – Panslonuvo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Make the iframe fill the screen */
-    body, html { margin:0; padding:0; height:100%; }
-    #map-frame { width:100%; height:100%; border:none; }
-  </style>
+  <style>body,html{margin:0;padding:0;height:100%}iframe{width:100%;height:100%;border:none}</style>
 </head>
 <body>
+  <!-- Note the ?map=overworld query param -->
   <iframe
-    id="map-frame"
-    src="../bluemap/web/index.html"
+    src="../bluemap/web/index.html?map=overworld"
     title="Panslonuvo Map"
   ></iframe>
 </body>
