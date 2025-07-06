@@ -1,3 +1,4 @@
+<!-- docs/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,67 +7,81 @@
     <title>Panslonuvo</title>
     <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- anime.js via CDN -->
+    <!-- anime.js -->
     <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+    <!-- Vanta.js (Net effect) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
   </head>
-  <body class="bg-gray-50 text-gray-900">
+  <body id="vanta-bg" class="min-h-screen flex flex-col">
 
     <!-- Navbar -->
-    <nav class="flex justify-between items-center p-4 bg-white shadow">
-      <a href="/" class="text-xl font-bold">Panslonuvo</a>
-      <div class="space-x-4">
-        <a href="/" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="cities.html" class="hover:underline">Cities</a>
-        <a href="explore.html" class="hover:underline">Explore</a>
+    <nav class="p-4 bg-white shadow flex flex-wrap justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold">Panslonuvo</a>
+      <div class="space-x-4 mt-2 md:mt-0">
+        <a href="language.html" class="hover:underline">Language</a>
+        <a href="states.html" class="hover:underline">States</a>
+        <a href="government.html" class="hover:underline">Government</a>
+        <a href="census.html" class="hover:underline">Census</a>
+        <a href="map.html" class="hover:underline">Map</a>
+        <a href="schools.html" class="hover:underline">Schools</a>
+        <a href="sports.html" class="hover:underline">Sports</a>
+        <a href="travel.html" class="hover:underline">Travel</a>
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="p-8">
-      <h1 class="text-4xl font-extrabold mb-4 animate-fade-in">Welcome to Panslonuvo</h1>
-      <p class="mb-6 animate-slide-up">
-        Your animated Minecraft country website.
+    <!-- Hero / Intro -->
+    <header class="flex-1 flex flex-col items-center justify-center text-center px-6">
+      <h1 class="text-5xl font-extrabold text-white mb-4 animate-fade-in">Welcome to Panslonuvo</h1>
+      <p class="text-xl text-white max-w-2xl animate-slide-up">
+        A one-stop hub for all things in our Minecraft country—language, cities, government, schools, sports, travel, and more.
       </p>
+    </header>
 
-      <!-- Example section grid -->
-      <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-4 bg-white rounded shadow hover:shadow-lg transition">
-          <h2 class="font-semibold mb-2">Our Cities</h2>
-          <p>Discover the unique towns of Panslonuvo.</p>
-        </div>
-        <div class="p-4 bg-white rounded shadow hover:shadow-lg transition">
+    <!-- Quick Links Grid -->
+    <main class="p-8 bg-white bg-opacity-90">
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="language.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
+          <h2 class="font-semibold mb-2">Language</h2>
+          <p>Browse and edit our custom tongue.</p>
+        </a>
+        <a href="states.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
+          <h2 class="font-semibold mb-2">States & Cities</h2>
+          <p>Explore each state and its towns.</p>
+        </a>
+        <a href="government.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
           <h2 class="font-semibold mb-2">Government</h2>
-          <p>Meet your leaders and see how we govern.</p>
-        </div>
-        <div class="p-4 bg-white rounded shadow hover:shadow-lg transition">
-          <h2 class="font-semibold mb-2">Explore More</h2>
-          <p>Virtual tours of museums, schools, and more.</p>
-        </div>
+          <p>View laws, offices, and leaders.</p>
+        </a>
+        <a href="census.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
+          <h2 class="font-semibold mb-2">Census</h2>
+          <p>Add families via the census form.</p>
+        </a>
+        <a href="map.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
+          <h2 class="font-semibold mb-2">Map</h2>
+          <p>Interactive, labeled world map.</p>
+        </a>
+        <a href="schools.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
+          <h2 class="font-semibold mb-2">Schools</h2>
+          <p>List of schools and their people.</p>
+        </a>
+        <a href="sports.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
+          <h2 class="font-semibold mb-2">Sports</h2>
+          <p>All our teams and programs.</p>
+        </a>
+        <a href="travel.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
+          <h2 class="font-semibold mb-2">Travel</h2>
+          <p>Guides, laws, and tips for visitors.</p>
+        </a>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="p-4 text-center text-sm bg-white border-t">
+    <footer class="p-4 text-center bg-white bg-opacity-90">
       © 2025 Panslonuvo
     </footer>
 
-    <!-- Animation init -->
-    <script>
-      anime({
-        targets: '.animate-fade-in',
-        opacity: [0,1],
-        duration: 1500,
-        easing: 'easeOutQuad'
-      });
-      anime({
-        targets: '.animate-slide-up',
-        translateY: [40,0],
-        opacity: [0,1],
-        duration: 1500,
-        delay: 300,
-        easing: 'easeOutExpo'
-      });
-    </script>
+    <!-- Page-specific JS -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
