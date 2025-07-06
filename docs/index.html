@@ -1,85 +1,60 @@
-<!-- docs/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panslonuvo</title>
-    <!-- Tailwind via CDN -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- anime.js -->
     <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
-    <!-- Vanta.js (Net effect) -->
+    <!-- three.js + Vanta.NET -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+    <style>
+      /* Overlay to ensure content stands out */
+      #overlay {
+        background: rgba(11, 47, 109, 0.6); /* navy with opacity */
+      }
+    </style>
   </head>
-  <body id="vanta-bg" class="min-h-screen flex flex-col">
+  <body id="vanta-bg" class="min-h-screen flex items-center justify-center relative text-white overflow-hidden">
+    <!-- Flag watermark (drop your flag at docs/images/flag.png) -->
+    <img src="images/flag.png" alt="Panslonuvo Flag"
+         class="absolute w-64 opacity-10 transform -rotate-12">
 
-    <!-- Navbar -->
-    <nav class="p-4 bg-white shadow flex flex-wrap justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold">Panslonuvo</a>
-      <div class="space-x-4 mt-2 md:mt-0">
-        <a href="language.html" class="hover:underline">Language</a>
-        <a href="states.html" class="hover:underline">States</a>
-        <a href="government.html" class="hover:underline">Government</a>
-        <a href="census.html" class="hover:underline">Census</a>
-        <a href="map.html" class="hover:underline">Map</a>
-        <a href="schools.html" class="hover:underline">Schools</a>
-        <a href="sports.html" class="hover:underline">Sports</a>
-        <a href="travel.html" class="hover:underline">Travel</a>
+    <!-- Dark overlay + content wrapper -->
+    <div id="overlay"
+         class="relative z-10 p-8 rounded-xl flex flex-col items-center space-y-8">
+      <h1 id="site-title" class="text-6xl font-extrabold">Panslonuvo</h1>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full text-center">
+        <a href="language.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >Language</a>
+        <a href="states.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >States</a>
+        <a href="government.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >Government</a>
+        <a href="census.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >Census</a>
+        <a href="map.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >Map</a>
+        <a href="schools.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >Schools</a>
+        <a href="sports.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >Sports</a>
+        <a href="travel.html"
+           class="py-3 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-lg transition"
+           >Travel</a>
       </div>
-    </nav>
-
-    <!-- Hero / Intro -->
-    <header class="flex-1 flex flex-col items-center justify-center text-center px-6">
-      <h1 class="text-5xl font-extrabold text-white mb-4 animate-fade-in">Welcome to Panslonuvo</h1>
-      <p class="text-xl text-white max-w-2xl animate-slide-up">
-        A one-stop hub for all things in our Minecraft country—language, cities, government, schools, sports, travel, and more.
-      </p>
-    </header>
-
-    <!-- Quick Links Grid -->
-    <main class="p-8 bg-white bg-opacity-90">
-      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <a href="language.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">Language</h2>
-          <p>Browse and edit our custom tongue.</p>
-        </a>
-        <a href="states.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">States & Cities</h2>
-          <p>Explore each state and its towns.</p>
-        </a>
-        <a href="government.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">Government</h2>
-          <p>View laws, offices, and leaders.</p>
-        </a>
-        <a href="census.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">Census</h2>
-          <p>Add families via the census form.</p>
-        </a>
-        <a href="map.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">Map</h2>
-          <p>Interactive, labeled world map.</p>
-        </a>
-        <a href="schools.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">Schools</h2>
-          <p>List of schools and their people.</p>
-        </a>
-        <a href="sports.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">Sports</h2>
-          <p>All our teams and programs.</p>
-        </a>
-        <a href="travel.html" class="block p-6 bg-gray-100 rounded shadow hover:bg-gray-200 transition">
-          <h2 class="font-semibold mb-2">Travel</h2>
-          <p>Guides, laws, and tips for visitors.</p>
-        </a>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="p-4 text-center bg-white bg-opacity-90">
-      © 2025 Panslonuvo
-    </footer>
+    </div>
 
     <!-- Page-specific JS -->
     <script src="./js/index.js"></script>
