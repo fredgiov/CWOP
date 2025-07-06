@@ -1,0 +1,35 @@
+<!-- docs/map.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Map – Panslonuvo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+</head>
+<body id="vanta-bg" class="min-h-screen flex flex-col">
+  <nav class="p-4 bg-white shadow flex justify-between">
+    <a href="/" class="font-bold text-xl">Panslonuvo</a>
+    <div class="space-x-4">
+      <a href="map.html" class="underline font-semibold">Map</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 relative">
+    <h1 class="text-3xl font-bold p-6 animate-fade-in">Virtual Map</h1>
+    <div id="map" class="absolute inset-0"></div>
+  </main>
+
+  <footer class="p-4 text-center bg-white border-t">
+    © 2025 Panslonuvo
+  </footer>
+
+  <script src="./js/map.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- docs/travel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel – Panslonuvo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"/>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.cells.min.js"></script>
+</head>
+<body id="vanta-bg" class="min-h-screen flex flex-col">
+  <nav class="p-4 bg-white shadow flex justify-between">
+    <a href="/" class="font-bold text-xl">Panslonuvo</a>
+    <div class="space-x-4">
+      <a href="travel.html" class="underline font-semibold">Travel</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold mb-4 animate-fade-in">Travel Information</h1>
+    <div id="editor" class="bg-white p-4 rounded shadow" style="min-height:300px;">
+      <!-- travel tips, gear, laws, etc. -->
+    </div>
+  </main>
+
+  <footer class="p-4 text-center bg-white border-t">
+    © 2025 Panslonuvo
+  </footer>
+
+  <script src="./js/travel.js"></script>
+</body>
+</html>

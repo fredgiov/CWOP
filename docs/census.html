@@ -1,0 +1,35 @@
+<!-- docs/census.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Census – Panslonuvo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+</head>
+<body id="vanta-bg" class="min-h-screen flex flex-col">
+  <nav class="p-4 bg-white shadow flex justify-between">
+    <a href="/" class="font-bold text-xl">Panslonuvo</a>
+    <div class="space-x-4">
+      <a href="census.html" class="underline font-semibold">Census</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 p-6">
+    <h1 class="text-3xl font-bold mb-4 animate-fade-in">Census Form</h1>
+    <!-- Embed your Google Form here -->
+    <div class="w-full h-screen max-w-4xl mx-auto">
+      <iframe src="YOUR_GOOGLE_FORM_URL" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+  </main>
+
+  <footer class="p-4 text-center bg-white border-t">
+    © 2025 Panslonuvo
+  </footer>
+
+  <script src="./js/census.js"></script>
+</body>
+</html>
