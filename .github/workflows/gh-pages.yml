@@ -6,21 +6,6 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install deps
-        run: npm install
-      - name: Build Tailwind
-        run: npx tailwindcss -i src/css/tailwind.css -o docs/css/output.css --minify
-      - name: Render EJS to HTML
-        run: node scripts/render-ejs.js
-      - name: Copy static assets
-        run: |
-          cp -R public/js docs/js
-          cp -R public/images docs/images
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
