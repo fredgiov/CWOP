@@ -1,12 +1,12 @@
-[2025-07-06 20:24:48][INFO] Starting webserver ...
-[2025-07-06 20:24:48][INFO] Initializing Storage: 'file' (Type: 'bluemap:file')
-[2025-07-06 20:24:49][WARNING] 
+[2025-07-06 20:38:24][INFO] Starting webserver ...
+[2025-07-06 20:38:24][INFO] Initializing Storage: 'file' (Type: 'bluemap:file')
+[2025-07-06 20:38:24][WARNING] 
 ################################
  There is a problem with your BlueMap setup!
  BlueMap failed to bind to the configured address.
  This usually happens when the configured port (8100) is already in use by some other program.
 ################################
-[2025-07-06 20:24:49][SEVERE] Detailed error:
+[2025-07-06 20:38:24][SEVERE] Detailed error:
 de.bluecolored.bluemap.common.config.ConfigurationException: java.net.BindException: Address already in use: bind
 	at de.bluecolored.bluemap.cli.BlueMapCLI.startWebserver(BlueMapCLI.java:305)
 	at de.bluecolored.bluemap.cli.BlueMapCLI.main(BlueMapCLI.java:395)
